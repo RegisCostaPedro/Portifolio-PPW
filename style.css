@@ -17,7 +17,12 @@ body {
   height: 70px;
   background: #eee;
   font-size: 20px;
-  position: static;
+ 
+
+ 
+  position: fixed;
+ z-index: 100;/ /*deixar nav bar fixa*/
+  
 }
 
 .nav-bar .navBar-itens ul {
@@ -91,25 +96,62 @@ body {
 .nav-bar .navBar-itens li:hover .line {
   width: 100%;
 }
+
+
 /*HOME PAGE*/
 /*da para colocar a imagem de fundo aqui*/
 .container-home-page {
-  margin-top: auto;
+ 
+  margin-top: 5%;
   position: absolute;
   display: flex;
   height: 300px;
   justify-content: center;
   align-items: flex-end;
   background-color: rgb(223, 223, 223);
+
   margin-bottom: 200px;
 }
 
-.container-home-page .container-home h1 {
-  text-align: center;
-  font-size: 30px;
-  margin-bottom: 10%;
+
+
+.title-home {
+  display: flex;
+  margin: auto;
+ 
+  align-items: center;
+  justify-content:  center;
+
 }
 
+.title-home  h1 {
+  
+  text-align: center;
+  
+align-items: center;
+justify-content: center;
+  font-size: 60px;
+font-weight: 200;
+  
+font-family: 'NBC Tinker', sans-serif;
+                                                
+  margin-bottom: 17px;                              
+  margin-left: 100px;
+       
+}
+.title-home span {
+
+ padding-left: 180px;
+ margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 60px;
+  opacity: 0.5;
+  color: #c21515;
+  font-family: 'NBC Tinker', sans-serif;
+  font-weight: 100;                                        
+
+}
 .container-home-page .img-header {
   width: 100vw;
   height: 70px;
@@ -120,25 +162,26 @@ body {
 }
 
 .container-home-page .img-header img {
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   border: 2px solid #000;
+  border-radius: 4px;
 }
 
 .container-sobre {
-  margin-top: auto;
+
   position: absolute;
   display: flex;
-  height: 300px;
+  height:750px;
   width: 100%;
   justify-content: center;
 
-  /*border: 1px solid red;*/
-  margin-top: 305px;
+  border: 1px solid red;
+  margin-top: 390px;
 }
 .container-sobre .section-sobre h1 {
   padding-top: 10px;
@@ -197,7 +240,71 @@ body {
 .tabela-dados th,td{
   padding: 5px;
 }
-
-.tabela-dados  table,th,td{
+.tabela-dados table{
+border-radius: 4px;
   
 }
+.tabela-dados  th td{
+  border-radius: 4px ;
+  
+ }
+ 
+
+ /*PAGINA DE ESTUDOS*/
+
+.container-estudos{
+  top: 100%;
+  position: absolute;
+  display: flex;
+  height: 750px;
+  width: 100%;
+  justify-content: center;
+
+  border: 1px solid rgb(251, 255, 0);
+  margin-top: 530px;
+}
+.container-estudos h1{
+  margin-top: 100px;
+  text-align: center;
+}
+.container-estudos .estudos-tecnologia{
+  margin-top: 30px;
+display: flex;
+justify-content: space-around;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+.container-estudos .estudos-tecnologia ul {
+  
+  border: 1px solid  #000;
+  border-radius:5px;
+  margin: 20px;
+  width: 280px;
+  height: 397px;
+  justify-content: center;
+  align-items: center;
+    }
+
+    .container-estudos .estudos-tecnologia img{
+     
+      margin: auto;
+      
+      display: flex;
+      justify-content: center;
+   
+      width: 100px;
+      height: 100px;
+       }
+
+      .container-estudos .estudos-tecnologia li{
+        list-style: none;
+        text-align: center;
+          }
+          .container-estudos .estudos-tecnologia p{
+            text-align: center;
+          text-indent: 1em;
+          padding: 10px;
+              }
+            
