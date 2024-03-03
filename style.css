@@ -83,14 +83,12 @@ font-weight: 600;
   overflow: hidden;
   height: 200px;
 }
+/* TITULO ANIMADO */
 .text-animation{
   display: flex;
   justify-content: center;
   margin-left:35% ;
 }
-
-
-
 
 .title-home .text-animation h1 {
   text-align: center;
@@ -153,6 +151,7 @@ margin-bottom: 90px;
   color: #2d0061;
 }
 
+/*IMAGEM DA HEADER*/
 .container-home-page .img-header {
   width: 100vw;
   height: 80px;
@@ -173,7 +172,9 @@ margin-bottom: 90px;
   border-radius: 4px;
   align-items: end;
 }
-/*SOBRE MIM*/
+
+
+/*PAGINA SOBRE MIM*/
 .container-sobre {
   margin-top: 25%;
   position: absolute;
@@ -244,6 +245,7 @@ margin-bottom: 90px;
 
 .container-estudos {
   margin-top: 50px;
+
   top: 55%;
   position: absolute;
   display: flex;
@@ -252,9 +254,16 @@ margin-bottom: 90px;
   justify-content: center;
 }
 .container-estudos h1 {
+  color: #fff;
   margin-top: 100px;
   text-align: center;
   font-size: 30px;
+  width: 100vw;
+  height: 60px;
+  background-color: #081027;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 
 /*Lista/card de tecnlogias e projetos*/
@@ -265,6 +274,7 @@ margin-bottom: 90px;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  
 }
 .container-estudos .estudos-tecnologia ul {
   border: 1px solid #000;
@@ -275,7 +285,9 @@ margin-bottom: 90px;
   justify-content: center;
   align-items: center;
   transition: 0.2s ease-in;
+  
 }
+
 
 .estudos-tecnologia ul:hover {
   background: rgba(255, 255, 255, 0.25);
@@ -307,16 +319,66 @@ margin-bottom: 90px;
   text-indent: 1em;
   padding: 10px;
 }
-
+/* CARDS PROJETOS */
 .container-estudos .estudos-projetos ul {
-  border: 1px solid #000;
+  border: 3px solid rgba(0, 0, 0, 0.090);
   border-radius: 5px;
   margin: 20px;
-  width: 280px;
-  height: 195px;
+  width: 300px;
+  height: 220px;
   justify-content: center;
   align-items: center;
+  transition: 0.2s ease-in;
+  
 }
+.container-estudos .estudos-projetos ul:hover{
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+}
+
+.estudos-projetos h3{
+  padding-left: 20px;
+}
+
+.estudos-projetos p{
+  padding-left: 20px;
+}
+
+.estudos-projetos a{
+  text-decoration: none;
+  padding-left: 20px;
+  color: #646464;
+  font-size: 16px;
+  transition: 0.3s ease-in;
+}
+.estudos-projetos a:hover{
+  text-decoration: none;
+  padding-left: 20px;
+  color: #2d0061;
+  font-size: 17px;
+}
+
+.loader {
+  position: relative;
+  margin-top: 45%;
+  margin-left: 45%;
+  width: 15px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  animation: l5 1s infinite linear alternate;
+}
+@keyframes l5 {
+    0%  {box-shadow: 20px 0 #000, -20px 0 #0002;background: #000 }
+    33% {box-shadow: 20px 0 #000, -20px 0 #0002;background: #0002}
+    66% {box-shadow: 20px 0 #0002,-20px 0 #000; background: #0002}
+    100%{box-shadow: 20px 0 #0002,-20px 0 #000; background: #000 }
+}
+
 
 .container-estudos .estudos-projetos li {
   list-style: none;
@@ -334,10 +396,11 @@ margin-bottom: 90px;
   width: 270px;
   height: 140px;
 }
+
 /*CONTATOS - FOOTER DA PAGINA*/
 footer {
   top: 100%;
-  margin-top: 790px;
+  margin-top: 890px;
   position: absolute;
   display: flex;
   justify-content: center;
