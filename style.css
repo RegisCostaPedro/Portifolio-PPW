@@ -40,20 +40,27 @@ body {
 }
 
 .navBar-itens a {
-  background: linear-gradient(to right, rgb(253, 253, 253), rgb(0, 0, 0));
 
-  background-size: 100% 0px, 7px;
-  background-position: 100% 100%, 3px 100%;
-  background-repeat: no-repeat;
-  transition: background-size 400ms;
   text-align: center;
   text-decoration: none;
-  color: #f8f8f8;
+  color: #17003b;
+  transition: ease-in;
 }
 .navBar-itens a:hover {
-  background-size: 0 4px, 100% 4px;
+  -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+  -webkit-mask-size: 200%;
+  animation: shine 2s infinite;
+font-weight: 600;
 }
-
+@-webkit-keyframes shine {
+  from {
+    -webkit-mask-position: 150%;
+  }
+  
+  to {
+    -webkit-mask-position: -50%;
+  }
+}
 /* HOME PAGE
 /*da para colocar a imagem de fundo aqui*/
 .container-home-page {
@@ -254,6 +261,7 @@ margin-bottom: 90px;
 .container-estudos .estudos-tecnologia,
 .estudos-projetos {
   margin-top: 30px;
+ 
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -329,7 +337,7 @@ margin-bottom: 90px;
 /*CONTATOS - FOOTER DA PAGINA*/
 footer {
   top: 100%;
-  margin-top: 1590px;
+  margin-top: 790px;
   position: absolute;
   display: flex;
   justify-content: center;
@@ -338,7 +346,7 @@ footer {
 
   padding: 20px;
   background: url(imgs/bg.png);
-  box-shadow: 3px 3px 3px #081027;
+  box-shadow: -3px -3px 3px #081027;
 }
 
 .lista-informacoes {
