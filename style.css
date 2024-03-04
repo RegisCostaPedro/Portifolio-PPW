@@ -4,8 +4,11 @@
   box-sizing: border-box;
 }
 
-body {
+html,body {
   font-family: "Anek Bangla", sans-serif;
+  overflow-x: hidden;
+  width: 100%;
+  background-color: #f1faff;
 }
 
 .nav-bar {
@@ -176,7 +179,7 @@ margin-bottom: 90px;
 
 /*PAGINA SOBRE MIM*/
 .container-sobre {
-  margin-top: 25%;
+  margin-top: 20rem;
   position: absolute;
   display: flex;
   height: 750px;
@@ -215,11 +218,11 @@ margin-bottom: 90px;
 .container-sobre .section-sobre p {
   border-radius: 50px 1px;
   width: 550px;
-  font-size: 15px;
-  text-indent: 2em;
+  font-size: 16px;
+  text-indent: 1em;
   font-weight: 500;
   padding-left: 10%;
-  padding-right: 5%;
+  padding-right: 10%;
 }
 
 .text2::before {
@@ -233,6 +236,7 @@ margin-bottom: 90px;
 }
 
 .text2 {
+ 
   color: #fff;
 }
 
@@ -244,9 +248,9 @@ margin-bottom: 90px;
 /*PAGINA DE ESTUDOS*/
 
 .container-estudos {
-  margin-top: 50px;
+  margin-top: 30rem;
 
-  top: 55%;
+ 
   position: absolute;
   display: flex;
   height: 1010px;
@@ -267,8 +271,7 @@ margin-bottom: 90px;
 }
 
 /*Lista/card de tecnlogias e projetos*/
-.container-estudos .estudos-tecnologia,
-.estudos-projetos {
+.container-estudos .estudos-tecnologia {
   margin-top: 30px;
  
   display: flex;
@@ -320,6 +323,12 @@ margin-bottom: 90px;
   padding: 10px;
 }
 /* CARDS PROJETOS */
+.estudos-projetos{
+  display: grid;
+  grid-template-columns: repeat(3, 25%);
+  grid-gap: 20px; 
+margin-left: 30px;
+}
 .container-estudos .estudos-projetos ul {
   border: 3px solid rgba(0, 0, 0, 0.090);
   border-radius: 5px;
@@ -400,16 +409,19 @@ margin-bottom: 90px;
 /*CONTATOS - FOOTER DA PAGINA*/
 footer {
   top: 100%;
-  margin-top: 890px;
+  margin-top: 70rem;
   position: absolute;
   display: flex;
   justify-content: center;
   height: 280px;
-  width: 100vw;
+  width: 100cqw;
 
   padding: 20px;
-  background: url(imgs/bg.png);
-  box-shadow: -3px -3px 3px #081027;
+  padding-left: 50px;
+  background: rgb(4,0,25);
+background: linear-gradient(180deg, rgba(4,0,25,1) 18%, rgba(8,16,39,1) 31%, rgba(0,0,0,1) 77%);
+  box-shadow: -2px -3px 3px #081027;
+  border-radius: 12px;
 }
 
 .lista-informacoes {
