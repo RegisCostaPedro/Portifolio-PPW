@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-html,body {
+html,
+body {
   font-family: "Anek Bangla", sans-serif;
   overflow-x: hidden;
   width: 100%;
@@ -43,23 +44,27 @@ html,body {
 }
 
 .navBar-itens a {
-
   text-align: center;
   text-decoration: none;
   color: #17003b;
   transition: ease-in;
 }
 .navBar-itens a:hover {
-  -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+  -webkit-mask-image: linear-gradient(
+    -75deg,
+    rgba(0, 0, 0, 0.6) 30%,
+    #000 50%,
+    rgba(0, 0, 0, 0.6) 70%
+  );
   -webkit-mask-size: 200%;
   animation: shine 2s infinite;
-font-weight: 600;
+  font-weight: 600;
 }
 @-webkit-keyframes shine {
   from {
     -webkit-mask-position: 150%;
   }
-  
+
   to {
     -webkit-mask-position: -50%;
   }
@@ -75,10 +80,10 @@ font-weight: 600;
   /* background-image: url(imgs/header.png); */
   background-size: cover;
   margin-bottom: 200px;
-  box-shadow: 3px 3px 3px #000;
+  box-shadow: #000;
 }
 
-.title-home .titulo{
+.title-home .titulo {
   margin-top: 5%;
   display: flex;
   align-items: center;
@@ -87,10 +92,10 @@ font-weight: 600;
   height: 200px;
 }
 /* TITULO ANIMADO */
-.text-animation{
+.text-animation {
   display: flex;
   justify-content: center;
-  margin-left:35% ;
+  margin-left: 35%;
 }
 
 .title-home .text-animation h1 {
@@ -107,25 +112,20 @@ font-weight: 600;
   position: absolute;
   width: 220px;
   opacity: 0;
-  
 }
-.title-home span{
+.title-home span {
   margin-bottom: 90px;
 }
 
 .title-home p {
-
-font-size: 30px;
-margin-bottom: 90px;
-
-
+  font-size: 30px;
+  margin-bottom: 90px;
 }
 .letter {
   display: inline-block;
 
   transform: translateZ(25px);
   transform-origin: 50% 50% 25px;
-
 }
 
 .letter.out {
@@ -176,7 +176,6 @@ margin-bottom: 90px;
   align-items: end;
 }
 
-
 /*PAGINA SOBRE MIM*/
 .container-sobre {
   margin-top: 20rem;
@@ -187,15 +186,17 @@ margin-bottom: 90px;
   justify-content: center;
 }
 .section-sobre {
+  position: relative;
   margin-top: 6%;
-  margin-right: 55%;
+
+  margin-right: 25%;
   padding-top: 5%;
   display: flex;
   height: 300px;
   width: 530px;
   border: 3px solid rgba(63, 63, 63, 0.041);
   border-radius: 10px;
-  transition: 6ms ease-in-out;
+  transition: 0.2s ease-in;
   cursor: pointer;
 }
 
@@ -208,6 +209,63 @@ margin-bottom: 90px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   height: 450px;
 }
+.listas-coisas{
+  display: grid;
+  grid-template-rows: repeat(1, 50%);
+  margin-bottom: 60px;
+}
+.section-hobbies{
+ 
+  position: relative;
+  margin-top: 20%;
+  margin-right: 50px;
+
+  height: 200px;
+  width: 330px;
+  border: 3px solid rgba(63, 63, 63, 0.041);
+  border-radius: 10px;
+  transition: 6ms ease-in-out;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+}
+.section-musicas{
+  
+  height: 200px;
+  width: 330px;
+  border: 3px solid rgba(63, 63, 63, 0.041);
+  border-radius: 10px;
+  transition: 6ms ease-in-out;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+}
+
+.section-hobbies:hover, .section-musicas:hover{
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.section-hobbies h1,
+.section-musicas h1 {
+  padding-top: 10px;
+  text-align: center;
+}
+
+.section-hobbies ul,
+.section-musicas ul {
+  list-style: none;
+  text-align: center;
+}
+.section-hobbies li,
+.section-musicas li {
+  padding-top: 10px;
+ font-size:  16px;
+}
+
+
 .container-sobre .section-sobre h1 {
   padding-bottom: 5px;
   font-size: 30px;
@@ -236,8 +294,7 @@ margin-bottom: 90px;
 }
 
 .text2 {
- 
-  color: #fff;
+  color: #f1faff;
 }
 
 .text2:hover {
@@ -250,7 +307,6 @@ margin-bottom: 90px;
 .container-estudos {
   margin-top: 30rem;
 
- 
   position: absolute;
   display: flex;
   height: 1010px;
@@ -273,11 +329,10 @@ margin-bottom: 90px;
 /*Lista/card de tecnlogias e projetos*/
 .container-estudos .estudos-tecnologia {
   margin-top: 30px;
- 
+
   display: flex;
   justify-content: space-around;
   align-items: center;
-  
 }
 .container-estudos .estudos-tecnologia ul {
   border: 1px solid #000;
@@ -288,9 +343,7 @@ margin-bottom: 90px;
   justify-content: center;
   align-items: center;
   transition: 0.2s ease-in;
-  
 }
-
 
 .estudos-tecnologia ul:hover {
   background: rgba(255, 255, 255, 0.25);
@@ -323,14 +376,14 @@ margin-bottom: 90px;
   padding: 10px;
 }
 /* CARDS PROJETOS */
-.estudos-projetos{
+.estudos-projetos {
   display: grid;
   grid-template-columns: repeat(3, 25%);
-  grid-gap: 20px; 
-margin-left: 30px;
+  grid-gap: 20px;
+  margin-left: 30px;
 }
 .container-estudos .estudos-projetos ul {
-  border: 3px solid rgba(0, 0, 0, 0.090);
+  border: 3px solid rgba(0, 0, 0, 0.09);
   border-radius: 5px;
   margin: 20px;
   width: 300px;
@@ -338,34 +391,32 @@ margin-left: 30px;
   justify-content: center;
   align-items: center;
   transition: 0.2s ease-in;
-  
 }
-.container-estudos .estudos-projetos ul:hover{
+.container-estudos .estudos-projetos ul:hover {
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-
 }
 
-.estudos-projetos h3{
+.estudos-projetos h3 {
   padding-left: 20px;
 }
 
-.estudos-projetos p{
+.estudos-projetos p {
   padding-left: 20px;
 }
 
-.estudos-projetos a{
+.estudos-projetos a {
   text-decoration: none;
   padding-left: 20px;
   color: #646464;
   font-size: 16px;
   transition: 0.3s ease-in;
 }
-.estudos-projetos a:hover{
+.estudos-projetos a:hover {
   text-decoration: none;
   padding-left: 20px;
   color: #2d0061;
@@ -382,12 +433,23 @@ margin-left: 30px;
   animation: l5 1s infinite linear alternate;
 }
 @keyframes l5 {
-    0%  {box-shadow: 20px 0 #000, -20px 0 #0002;background: #000 }
-    33% {box-shadow: 20px 0 #000, -20px 0 #0002;background: #0002}
-    66% {box-shadow: 20px 0 #0002,-20px 0 #000; background: #0002}
-    100%{box-shadow: 20px 0 #0002,-20px 0 #000; background: #000 }
+  0% {
+    box-shadow: 20px 0 #000, -20px 0 #0002;
+    background: #000;
+  }
+  33% {
+    box-shadow: 20px 0 #000, -20px 0 #0002;
+    background: #0002;
+  }
+  66% {
+    box-shadow: 20px 0 #0002, -20px 0 #000;
+    background: #0002;
+  }
+  100% {
+    box-shadow: 20px 0 #0002, -20px 0 #000;
+    background: #000;
+  }
 }
-
 
 .container-estudos .estudos-projetos li {
   list-style: none;
@@ -418,8 +480,13 @@ footer {
 
   padding: 20px;
   padding-left: 50px;
-  background: rgb(4,0,25);
-background: linear-gradient(180deg, rgba(4,0,25,1) 18%, rgba(8,16,39,1) 31%, rgba(0,0,0,1) 77%);
+  background: rgb(4, 0, 25);
+  background: linear-gradient(
+    180deg,
+    rgba(4, 0, 25, 1) 18%,
+    rgba(8, 16, 39, 1) 31%,
+    rgba(0, 0, 0, 1) 77%
+  );
   box-shadow: -2px -3px 3px #081027;
   border-radius: 12px;
 }
@@ -478,6 +545,10 @@ background: linear-gradient(180deg, rgba(4,0,25,1) 18%, rgba(8,16,39,1) 31%, rgb
   border-radius: 50%;
   transition: background 0.2s;
 }
+
+.fa-brands:hover{
+  color: #8e44ad;
+}
 .social-icons a {
   display: flex;
   align-items: center;
@@ -516,3 +587,5 @@ background: linear-gradient(180deg, rgba(4,0,25,1) 18%, rgba(8,16,39,1) 31%, rgb
   display: inline-block;
   margin: 0 10px;
 }
+
+
