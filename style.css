@@ -49,6 +49,7 @@ body {
   color: #17003b;
   transition: ease-in;
 }
+
 .navBar-itens a:hover {
   -webkit-mask-image: linear-gradient(
     -75deg,
@@ -77,7 +78,8 @@ body {
   justify-content: space-around;
   align-items: center;
   align-items: flex-end;
-  /* background-image: url(imgs/header.png); */
+  /*da para colocar a imagem de fundo aqui*/
+  background-image: url();
   background-size: cover;
   margin-bottom: 200px;
   box-shadow: #000;
@@ -165,7 +167,7 @@ body {
 }
 
 .container-home-page .img-header img {
-  width: 140px;
+  width: 135px;
   height: 140px;
   position: absolute;
   bottom: 0;
@@ -188,7 +190,6 @@ body {
 .section-sobre {
   position: relative;
   margin-top: 6%;
-
   margin-right: 25%;
   padding-top: 5%;
   display: flex;
@@ -209,63 +210,6 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.18);
   height: 450px;
 }
-.listas-coisas{
-  display: grid;
-  grid-template-rows: repeat(1, 50%);
-  margin-bottom: 60px;
-}
-.section-hobbies{
- 
-  position: relative;
-  margin-top: 20%;
-  margin-right: 50px;
-
-  height: 200px;
-  width: 330px;
-  border: 3px solid rgba(63, 63, 63, 0.041);
-  border-radius: 10px;
-  transition: 6ms ease-in-out;
-  cursor: pointer;
-  transition: 0.2s ease-in;
-}
-.section-musicas{
-  
-  height: 200px;
-  width: 330px;
-  border: 3px solid rgba(63, 63, 63, 0.041);
-  border-radius: 10px;
-  transition: 6ms ease-in-out;
-  cursor: pointer;
-  transition: 0.2s ease-in;
-}
-
-.section-hobbies:hover, .section-musicas:hover{
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-}
-
-.section-hobbies h1,
-.section-musicas h1 {
-  padding-top: 10px;
-  text-align: center;
-}
-
-.section-hobbies ul,
-.section-musicas ul {
-  list-style: none;
-  text-align: center;
-}
-.section-hobbies li,
-.section-musicas li {
-  padding-top: 10px;
- font-size:  16px;
-}
-
-
 .container-sobre .section-sobre h1 {
   padding-bottom: 5px;
   font-size: 30px;
@@ -300,6 +244,83 @@ body {
 .text2:hover {
   color: #000000;
   transition: 0.3s ease-in;
+}
+/* LISTA DE HOBBIES E CURIOSIDADES */
+.dropdown-hobbies,
+.dropdown-musicas {
+  position: relative;
+  margin-top: 20%;
+  margin-right: 50px;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 330px;
+  border: 3px solid rgba(63, 63, 63, 0.041);
+  border-radius: 10px;
+  transition: 6ms ease-in-out;
+  cursor: pointer;
+}
+
+.dropdown-musicas{
+  margin-top: 100px;
+  
+}
+.dropdown-hobbies button,
+.dropdown-musicas button {
+  background: none;
+  font-weight: 700;
+  margin-left: 30%;
+  font-family: "Anek Bangla", sans-serif;
+  font-size: 20px;
+  position: relative;
+  text-align: center;
+  color: #000000;
+  border: none;
+  cursor: pointer;
+}
+.dropdown-musicas button {
+  margin-left: 16%
+}
+.conteudo-dd ul {
+  color: #000;
+  font-size: 17px;
+  transition: 0.9s ease-in;
+}
+
+.conteudo-dd li {
+  list-style: none;
+  transition: 0.3s ease-in;
+}
+.dropdown-hobbies .conteudo-dd,
+.dropdown-musicas .conteudo-dd {
+  display: none;
+  position: absolute;
+  background-color: #f1faff;
+
+  box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.8);
+  text-align: center;
+  list-style: none;
+}
+.dropdown-hobbies:hover .conteudo-dd,
+.dropdown-musicas:hover .conteudo-dd {
+  display: block;
+  margin-top: 5px;
+  width: 325px;
+}
+
+.dropdown-hobbies li:hover,
+.dropdown-musicas li:hover {
+  background-color: #081027;
+  color: #fff;
+}
+
+.conteudo-dd img {
+  position: relative;
+  width: 23px;
+}
+.conteudo-dd a{
+  text-decoration: none;
+  color: #160147;
 }
 
 /*PAGINA DE ESTUDOS*/
@@ -391,6 +412,7 @@ body {
   justify-content: center;
   align-items: center;
   transition: 0.2s ease-in;
+  cursor: pointer;
 }
 .container-estudos .estudos-projetos ul:hover {
   background: rgba(255, 255, 255, 0.25);
@@ -546,8 +568,8 @@ footer {
   transition: background 0.2s;
 }
 
-.fa-brands:hover{
-  color: #8e44ad;
+.fa-brands:hover {
+  color: #c5c5c5;
 }
 .social-icons a {
   display: flex;
@@ -587,5 +609,3 @@ footer {
   display: inline-block;
   margin: 0 10px;
 }
-
-
