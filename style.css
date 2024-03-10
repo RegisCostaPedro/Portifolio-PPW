@@ -361,7 +361,7 @@ body {
   align-items: center;
 }
 .container-estudos .estudos-tecnologia ul {
-  border: 1px solid #000;
+  border: 3px solid rgba(63, 63, 63, 0.041);
   border-radius: 5px;
   margin: 20px;
   width: 280px;
