@@ -309,7 +309,7 @@ body {
 }
 
 .dropdown-hobbies li:hover,
-.dropdown-musicas li:hover {
+.dropdown-musicas li:hover, .dropdown-musicas a:hover {
   background-color: #081027;
   color: #fff;
 }
@@ -320,8 +320,13 @@ body {
 }
 .conteudo-dd a{
   text-decoration: none;
-  color: #160147;
+  color: #003f79;
 }
+.conteudo-dd a:hover{
+  text-decoration: none;
+  color: #f1faff;
+}
+
 
 /*PAGINA DE ESTUDOS*/
 
