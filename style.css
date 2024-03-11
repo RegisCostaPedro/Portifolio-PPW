@@ -161,7 +161,6 @@ body {
   width: 100vw;
   height: 80px;
   background-color: #081027;
-
   justify-content: center;
   align-items: baseline;
 }
@@ -181,34 +180,38 @@ body {
 /*PAGINA SOBRE MIM*/
 .container-sobre {
   margin-top: 20rem;
+  padding-left: 10%;
   position: absolute;
-  display: flex;
+  display: grid;
+
   height: 750px;
   width: 100%;
-  justify-content: center;
 }
 .section-sobre {
   position: relative;
-  margin-top: 6%;
+  margin-top: 2%;
   margin-right: 25%;
   padding-top: 5%;
   display: flex;
   height: 300px;
   width: 530px;
-  border: 3px solid rgba(63, 63, 63, 0.041);
-  border-radius: 10px;
-  transition: 0.2s ease-in;
+
   cursor: pointer;
 }
 
-.section-sobre:hover {
+.section-sobre section {
+  border-radius: 10px;
+  transition: 0.2s ease-in;
+  border: 3px solid rgba(63, 63, 63, 0.25);
+}
+
+.section-sobre .sobre-sct-txt:hover {
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  height: 450px;
+  border: 3px solid rgba(255, 255, 255, 0.18);
+  height: 380px;
 }
 .container-sobre .section-sobre h1 {
   padding-bottom: 5px;
@@ -245,13 +248,40 @@ body {
   color: #000000;
   transition: 0.3s ease-in;
 }
+
+/* Texto interesses profissionais */
+
+.interesses-sct-txt {
+  border: 3px solid rgba(63, 63, 63, 0.25);
+  width: 530px;
+  padding-bottom: 60px;
+  margin-left: 40px;
+}
+
+.section-sobre .interesses-sct-txt:hover {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.coding-gif img {
+  margin-bottom: 19px;
+  margin-left: 75px;
+  width: 450px;
+  border: 3px solid #081027;
+  border-radius: 10px;
+}
+
 /* LISTA DE HOBBIES E CURIOSIDADES */
+
+
 .dropdown-hobbies,
 .dropdown-musicas {
   position: relative;
-  margin-top: 20%;
-  margin-right: 50px;
-  align-items: center;
+  margin-top: 10%;
+  margin-left: 110px;
   justify-content: center;
   height: 50px;
   width: 330px;
@@ -261,9 +291,8 @@ body {
   cursor: pointer;
 }
 
-.dropdown-musicas{
+.dropdown-musicas {
   margin-top: 100px;
-  
 }
 .dropdown-hobbies button,
 .dropdown-musicas button {
@@ -279,7 +308,7 @@ body {
   cursor: pointer;
 }
 .dropdown-musicas button {
-  margin-left: 16%
+  margin-left: 16%;
 }
 .conteudo-dd ul {
   color: #000;
@@ -309,7 +338,8 @@ body {
 }
 
 .dropdown-hobbies li:hover,
-.dropdown-musicas li:hover, .dropdown-musicas a:hover {
+.dropdown-musicas li:hover,
+.dropdown-musicas a:hover {
   background-color: #081027;
   color: #fff;
 }
@@ -318,24 +348,21 @@ body {
   position: relative;
   width: 23px;
 }
-.conteudo-dd a{
+.conteudo-dd a {
   text-decoration: none;
   color: #003f79;
 }
-.conteudo-dd a:hover{
+.conteudo-dd a:hover {
   text-decoration: none;
   color: #f1faff;
 }
 
-
 /*PAGINA DE ESTUDOS*/
 
 .container-estudos {
-  margin-top: 30rem;
-
+  margin-top: 50rem;
   position: absolute;
   display: flex;
-  height: 1010px;
   width: 100%;
   justify-content: center;
 }
@@ -355,13 +382,12 @@ body {
 /*Lista/card de tecnlogias e projetos*/
 .container-estudos .estudos-tecnologia {
   margin-top: 30px;
-
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 .container-estudos .estudos-tecnologia ul {
-  border: 3px solid rgba(63, 63, 63, 0.041);
+  border: 3px solid rgba(63, 63, 63, 0.25);
   border-radius: 5px;
   margin: 20px;
   width: 280px;
@@ -376,8 +402,8 @@ body {
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 5px;
+  border: 3px solid rgba(255, 255, 255, 0.18);
   height: 400px;
 }
 
@@ -409,7 +435,7 @@ body {
   margin-left: 30px;
 }
 .container-estudos .estudos-projetos ul {
-  border: 3px solid rgba(0, 0, 0, 0.09);
+  border: 3px solid rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   margin: 20px;
   width: 300px;
@@ -498,7 +524,7 @@ body {
 /*CONTATOS - FOOTER DA PAGINA*/
 footer {
   top: 100%;
-  margin-top: 70rem;
+  margin-top: 90rem;
   position: absolute;
   display: flex;
   justify-content: center;
@@ -507,6 +533,7 @@ footer {
 
   padding: 20px;
   padding-left: 50px;
+
   background: rgb(4, 0, 25);
   background: linear-gradient(
     180deg,
@@ -515,7 +542,6 @@ footer {
     rgba(0, 0, 0, 1) 77%
   );
   box-shadow: -2px -3px 3px #081027;
-  border-radius: 12px;
 }
 
 .lista-informacoes {
