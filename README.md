@@ -1,7 +1,9 @@
 # Página de apresentação e portifólio pessoal
 
 
-![image](https://github.com/RegisCostaPedro/Portifolio-PPW/assets/138240650/0c5a0564-8f8b-4be5-a0ce-324f150a2700)
+![image](https://github.com/RegisCostaPedro/Portifolio-PPW/assets/138240650/2390e8a2-caaf-4180-9036-2f744dc85494)
+
+
 
 
 
