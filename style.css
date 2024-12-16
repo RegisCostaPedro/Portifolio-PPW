@@ -560,13 +560,14 @@ footer {
 
     font-family: "Lexend", sans-serif;
     display: flex;
-    width: 80vw;
+    width: 100vw;
     flex-direction: column;
     margin-top: 12%;
     h1 {
       font-size: 34px;
       font-weight: 300;
-      width: 60vw;
+      width: 90vw;
+      text-align: left;
     
     }
     br {
@@ -713,13 +714,14 @@ footer {
 
     font-family: "Lexend", sans-serif;
     display: flex;
-    width: 80vw;
+    width: 100vw;
     flex-direction: column;
     margin-top: 12%;
     h1 {
       font-size: 34px;
       font-weight: 300;
-      width: 60vw;
+      width: 90vw;
+      text-align: left;
     
     }
     br {
