@@ -184,7 +184,8 @@ ul.social-list {
 }
 
 .stacks-section h1,
-.projects-section h1 {
+.projects-section h1,
+.experiences-section h1 {
   font-size: 40px;
   font-family: "Lexend", sans-serif;
   font-weight: 300;
@@ -214,6 +215,7 @@ ul.social-list {
   height: 140px;
   padding: 15px 50px;
   text-align: center;
+  aspect-ratio: 16/9;
 }
 
 .container-tools img {
@@ -312,6 +314,87 @@ i.fa-java {
   color: #fd4c39;
 }
 
+.experiences-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+
+  margin: 0 auto;
+  flex-wrap: wrap;
+  margin-bottom: 5%;
+}
+
+.container-experiences ul {
+  display: flex;
+
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  h4 {
+    text-align: center;
+    margin-bottom: 3px;
+    transition: 0.3s ease-in;
+    :hover {
+      color: #112968;
+    }
+  }
+
+  .line {
+    width: 80%;
+    border: 1px solid #2759d6;
+    margin: 0 auto;
+    margin-bottom: 9px;
+  }
+
+  li {
+    list-style: none;
+    border: 3px solid #070e39ed;
+    border-radius: 3px;
+    padding: 10px;
+    width: 540px;
+    height: 270px;
+    font-weight: 400;
+  }
+  ol {
+    margin-top: 3px;
+  }
+  a {
+    text-decoration: none;
+    color: #1d1d1d;
+  }
+
+  h5 {
+    margin: 10px 0 5px 0;
+    font-size: 17px;
+  }
+}
+.description-experiences {
+  overflow-y: scroll;
+  height: 80px;
+  word-wrap: break-word;
+
+  p {
+    text-align: justify;
+    padding: 3px;
+  }
+}
+
+.description-experiences::-webkit-scrollbar {
+  width: 2px;
+}
+
+.description-experiences::-webkit-scrollbar-track {
+  background-color: rgba(0, 195, 255, 0.288);
+}
+
+.description-experiences::-webkit-scrollbar-thumb {
+  background-color: blue;
+  border-radius: 20px;
+  border: 31x solid rgba(255, 166, 0, 0.534);
+}
+
 footer {
   display: flex;
   align-items: center;
@@ -329,7 +412,6 @@ footer {
   justify-content: center;
   color: #e9f0fe;
   gap: 250px;
- 
 }
 
 .lista-informacoes h3 {
