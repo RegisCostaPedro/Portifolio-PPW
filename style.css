@@ -521,7 +521,8 @@ footer {
 /* Responsividade */
 
 /* Telas pequenas (mobile) */
-@media (max-width: 768px) {
+@media (max-width: 868px) {
+
   nav.nav-bar {
     display: none;
   }
@@ -564,6 +565,7 @@ footer {
     flex-direction: column;
     margin-top: 12%;
     padding: 10px 30px;
+
     h1 {
       font-size: 34px;
       font-weight: 300;
