@@ -1,7 +1,6 @@
 # Página de apresentação e portifólio pessoal
 
 
-![image](https://github.com/RegisCostaPedro/Portifolio-PPW/assets/138240650/2390e8a2-caaf-4180-9036-2f744dc85494)
 
 
 Trabalho escolar que consiste em criar uma pagina de apresentação pessoal.
