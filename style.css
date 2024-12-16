@@ -563,11 +563,13 @@ footer {
     width: 100vw;
     flex-direction: column;
     margin-top: 12%;
+    padding: 10px 30px;
     h1 {
       font-size: 34px;
       font-weight: 300;
       width: 90vw;
       text-align: left;
+     
     
     }
     br {
