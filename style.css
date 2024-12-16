@@ -12,6 +12,7 @@ body {
   overflow-x: hidden;
   background-color: #f1faff;
   scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
   font-family: "Lexend", sans-serif;
 }
 
@@ -102,7 +103,7 @@ a.nav-link {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
 }
 
@@ -110,7 +111,8 @@ a.nav-link {
 .social-cards {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .title-apresentation {
@@ -145,11 +147,8 @@ img.pfp {
   margin-right: 5px;
   width: 260px;
   height: 320px;
-
   box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
-  /* background-image: url('assets/imgs/Gradient-footer.svg');  */
-
-  border-radius: 12px;
+  border-radius: 4px;
 }
 
 ul.social-list {
@@ -166,12 +165,15 @@ ul.social-list {
     padding: 5px;
     background-color: #e9f0fe;
     border-radius: 3px;
-
+    transition: 0.1ms ease-in;
     ion-icon {
       width: 36px;
       height: 30px;
       color: #2759d6;
     }
+  }
+  :hover {
+    background-color: #d6e3fd;
   }
 }
 
@@ -180,7 +182,7 @@ ul.social-list {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 4%;
+  margin-bottom: 10%;
 }
 
 .stacks-section h1,
@@ -211,7 +213,7 @@ ul.social-list {
   border: 1px solid #2759d6;
   background-color: #e9f0fe;
   border-radius: 3px;
-  width: 260px;
+
   height: 140px;
   padding: 15px 50px;
   text-align: center;
@@ -230,10 +232,16 @@ ul.social-list {
 }
 
 .projects-section {
-  padding: 25px 5px;
   background-color: #070e39;
-  width: 100vw;
+
   color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-bottom: 5%;
+  padding: 30px 0;
 }
 
 .container-projects {
@@ -318,27 +326,27 @@ i.fa-java {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100vw;
-
-  margin: 0 auto;
+  width: 100%;
   flex-wrap: wrap;
   margin-bottom: 5%;
+  margin-top: 5%;
+  padding: 0 20px;
 }
 
 .container-experiences ul {
   display: flex;
-
   align-items: center;
   flex-wrap: wrap;
   gap: 30px;
+  justify-content: center;
 
   h4 {
     text-align: center;
     margin-bottom: 3px;
     transition: 0.3s ease-in;
-    :hover {
-      color: #112968;
-    }
+  }
+  a:hover {
+    color: #112968;
   }
 
   .line {
@@ -349,20 +357,29 @@ i.fa-java {
   }
 
   li {
+    display: flex;
+    flex-direction: column;
     list-style: none;
     border: 3px solid #070e39ed;
     border-radius: 3px;
     padding: 10px;
-    width: 540px;
-    height: 270px;
+    width: 100%;
+    max-width: 540px;
+    height: auto;
     font-weight: 400;
   }
+
   ol {
     margin-top: 3px;
   }
+
   a {
     text-decoration: none;
     color: #1d1d1d;
+  }
+  a.link-project {
+    text-decoration: underline;
+    color: #00598d;
   }
 
   h5 {
@@ -370,6 +387,7 @@ i.fa-java {
     font-size: 17px;
   }
 }
+
 .description-experiences {
   overflow-y: scroll;
   height: 80px;
@@ -394,12 +412,13 @@ i.fa-java {
   border-radius: 20px;
   border: 31x solid rgba(255, 166, 0, 0.534);
 }
-
 footer {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100vw;
+  width: 100%;
+  height: auto;
   padding: 5%;
   background-image: url("assets/imgs/Gradient-footer.svg");
   background-size: cover;
@@ -407,11 +426,12 @@ footer {
 
 .lista-informacoes {
   display: flex;
+  flex-wrap: wrap;
   margin: 0 auto;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: space-between;
   color: #e9f0fe;
-  gap: 250px;
+  gap: 280px;
 }
 
 .lista-informacoes h3 {
@@ -419,19 +439,36 @@ footer {
   margin-bottom: 4px;
 }
 
-.col-links {
-  display: none;
-}
-
 .col-infos p {
-  font-size: 17px;
+  font-size: 16px;
   text-align: start;
   padding-top: 1px;
 }
+
+.col-links {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  text-decoration: none;
+  color: #fff;
+  width: 100%;
+}
+.col-links ul {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 5px;
+}
+.col-links li {
+  list-style: none;
+}
+
 .col-links a {
   text-decoration: none;
   color: #fff;
 }
+
 .col-links a:hover {
   background-size: 0 1px, 100% 3px;
 }
@@ -442,10 +479,8 @@ footer {
 
 .social-icons .fa-brands {
   margin: auto;
-
   font-size: 24px;
   margin-right: 10px;
-
   padding: 16px;
   border-radius: 50%;
   transition: background 0.2s;
@@ -454,13 +489,13 @@ footer {
 .social-icons .fa-brands:hover {
   color: #2759d6;
 }
+
 .social-icons a {
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
   padding: 1px;
-  text-decoration: none;
   color: #fff;
 }
 
@@ -481,4 +516,201 @@ footer {
 
 .social-icons li {
   display: inline-block;
+}
+
+/* Responsividade */
+
+/* Telas pequenas (mobile) */
+@media (max-width: 768px) {
+  nav.nav-bar {
+    display: none;
+  }
+  .nav-bar-list {
+    display: none;
+  }
+
+  main.main-container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin-bottom: 10vh;
+  }
+  .apresentation-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+  }
+
+  .social-cards {
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+    margin-top: 10vh;
+  }
+  .social-list {
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+  }
+
+  .title-apresentation {
+
+    font-family: "Lexend", sans-serif;
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    margin-top: 12%;
+    h1 {
+      font-size: 34px;
+      font-weight: 300;
+      text-align: justify;
+    }
+    br {
+      display: none;
+    }
+
+    p {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #424242;
+      width: 100%;
+      font-family: "Didact Gothic", sans-serif;
+      font-weight: 400;
+      text-align: justify;
+    }
+  }
+  .image-dev {
+    margin-top: 10%;
+    display: flex;
+  }
+
+  img.pfp-pic {
+
+    height: 325px;
+  }
+
+  img.pfp {
+    position: absolute;
+    margin-top: 20px;
+    margin-right: 5px;
+    width: 242px;
+    height: 310px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+    border-radius: 4px;
+  }
+
+  ul.social-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+
+    gap: 23px;
+
+    li {
+      list-style: none;
+      padding: 5px;
+      background-color: #e9f0fe;
+      border-radius: 3px;
+      transition: 0.1ms ease-in;
+      ion-icon {
+        width: 36px;
+        height: 30px;
+        color: #2759d6;
+      }
+    }
+    :hover {
+      background-color: #d6e3fd;
+    }
+  }
+
+  .experiences-section {
+    margin: 15% 0;
+  }
+
+  .container-experiences ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .container-experiences ul li {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+  }
+
+  .description-experiences {
+    height: auto;
+    overflow-y: visible;
+  }
+
+  .lista-informacoes {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    align-items: flex-start;
+    justify-content: space-between;
+    color: #e9f0fe;
+    gap: 30px;
+  }
+
+  .social-icons {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .stacks-section h1,
+  .projects-section h1,
+  .experiences-section h1 {
+    margin-bottom: 7%;
+    padding: 0 10px;
+  }
+}
+
+/* Telas médias (tablets) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container-experiences ul {
+    gap: 25px;
+  }
+  .col-links {
+    display: block;
+  }
+  .container-experiences ul li {
+    width: calc(50% - 20px);
+  }
+
+  .lista-informacoes {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    color: #e9f0fe;
+    gap: 130px;
+  }
+
+  .col-links {
+    display: none;
+  }
+}
+
+/* Telas grandes (desktops) */
+@media (min-width: 1024px) {
+  .container-experiences ul {
+    gap: 30px;
+  }
+
+  .container-experiences ul li {
+    width: 540px;
+    height: 290px;
+  }
+
+  .col-links {
+    display: none;
+  }
 }
