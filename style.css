@@ -714,10 +714,10 @@ footer {
 /* Telas médias (tablets) */
 @media (min-width: 768px) and (max-width: 1024px) {
   nav.nav-bar {
-    display: none;
+    display: flex;
   }
   .nav-bar-list {
-    display: none;
+    display: flex;
   }
 
   main.main-container {
