@@ -451,7 +451,9 @@ footer {
   text-align: start;
   padding-top: 1px;
 }
-
+.col-infos > p > a{
+  color: #fff;
+}
 .col-links {
   display: none;
   text-align: center;
