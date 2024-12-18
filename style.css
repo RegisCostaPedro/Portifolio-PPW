@@ -544,13 +544,11 @@ footer {
   .mobile-menu-icon button {
     position: absolute;
     all: unset;
-
   }
 
   .mobile-menu-icon i {
     color: #2a65f0;
-    font-size: 28px;
-    
+    font-size: 25px;
   }
   .fa-x {
     color: #f1faff;
@@ -569,11 +567,7 @@ footer {
     align-items: start;
     padding: 5rem 2rem 2rem;
     background-color: #112968;
-
-   
   }
-
-
 
   .mobile-menu .nav-item {
     display: block;
@@ -586,9 +580,10 @@ footer {
 
   .nav-item {
     display: none;
-   a{ font-size: 20px;
+    a {
+      font-size: 18px;
+    }
   }
-}
 
   main.main-container {
     display: flex;
