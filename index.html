@@ -10,9 +10,10 @@
   <body>
     
     <header>
-   
-     
+      
       <nav class="nav-bar">
+
+
         <ul class="nav-bar-list">
           <li class="nav-item">
             <a class="nav-link" href="#inicio">Início</a>
@@ -38,7 +39,43 @@
             ></a>
           </li>
         </ul>
-      </nav>
+
+        <div class="mobile-menu-icon">
+          <button onclick="menuShow()">
+            <i class="fa-solid fa-bars icon"></i>
+          </button>
+        </div>
+        <div class="mobile-menu">
+          <ul class="nav-bar-list">
+            <li class="nav-item">
+              <a class="nav-link" href="#inicio">Início</a>
+            </li>
+  
+            <li class="nav-item">
+              <a class="nav-link" href="#projetos">Projetos</a>
+            </li>
+  
+            <li class="nav-item">
+              <a class="nav-link" href="#contatos">Entrar em Contato</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#experiencias">Experiências</a>
+            </li>
+  
+            <li class="nav-item btn-curriculo">
+              <a
+                class="nav-link"
+                href="assets/dnwld/Regis Costa Pedro-Curriculo.pdf"
+                target="_blank"
+                >Currículo<span><ion-icon name="download"></ion-icon></span
+              ></a>
+            </li>
+          </ul>
+        </div>
+   </nav> 
+
+    <!-- MENU MOBILE-->
+      
     </header>
 
     <main class="main-container" id="inicio">
@@ -308,6 +345,7 @@
         </div>
       </div>
     </footer>
+    <script src="app.js"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script
       src="https://kit.fontawesome.com/b68f297370.js"

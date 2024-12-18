@@ -24,8 +24,7 @@ nav.nav-bar {
   height: 65px;
   background: #0d1549;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.226);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
+
   font-size: 20px;
   position: fixed;
   z-index: 100;
@@ -95,6 +94,14 @@ a.nav-link {
   color: #fff;
   font-size: 16px;
   font-weight: 200;
+}
+
+.mobile-menu-icon {
+  display: none;
+}
+
+.mobile-menu {
+  display: none;
 }
 /* Main Content */
 
@@ -522,13 +529,66 @@ footer {
 
 /* Telas pequenas (mobile) */
 @media (max-width: 868px) {
-
   nav.nav-bar {
-    display: none;
+    all: unset;
+    display: flex;
+    width: 100%;
   }
-  .nav-bar-list {
-    display: none;
+  .mobile-menu-icon {
+    display: block;
+    width: 100%;
+    position: fixed;
+    padding: 1rem 2rem;
+    z-index: 100;
   }
+  .mobile-menu-icon button {
+    position: absolute;
+    all: unset;
+
+  }
+
+  .mobile-menu-icon i {
+    color: #2a65f0;
+    font-size: 28px;
+    
+  }
+  .fa-x {
+    color: #f1faff;
+  }
+  .mobile-menu {
+    width: 100%;
+    z-index: 99;
+    position: absolute;
+  }
+
+  .mobile-menu ul {
+    width: 100%;
+
+    position: fixed;
+    flex-direction: column;
+    align-items: start;
+    padding: 5rem 2rem 2rem;
+    background-color: #112968;
+
+   
+  }
+
+
+
+  .mobile-menu .nav-item {
+    display: block;
+  }
+
+  .open {
+    display: block;
+    position: absolute;
+  }
+
+  .nav-item {
+    display: none;
+   a{ font-size: 20px;
+  }
+}
 
   main.main-container {
     display: flex;
@@ -551,6 +611,7 @@ footer {
     margin-top: 10vh;
   }
   .social-list {
+    position: relative;
     display: flex;
     align-items: center;
 
@@ -558,7 +619,6 @@ footer {
   }
 
   .title-apresentation {
-
     font-family: "Lexend", sans-serif;
     display: flex;
     width: 100vw;
@@ -571,8 +631,6 @@ footer {
       font-weight: 300;
       width: 90vw;
       text-align: left;
-     
-    
     }
     br {
       display: none;
@@ -594,7 +652,6 @@ footer {
   }
 
   img.pfp-pic {
-
     height: 325px;
   }
 
@@ -677,38 +734,35 @@ footer {
     padding: 0 10px;
   }
 
-  
-.col-links,.col-infos {
-  display: flex;
-  text-align: center;
-  align-items: center;
-  flex-direction: column;
-  text-decoration: none;
-  color: #fff;
-  width: 100%;
-}
+  .col-links,
+  .col-infos {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+    color: #fff;
+    width: 100%;
+  }
 
+  .col-links ul {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 5px;
+  }
+  .col-links li {
+    list-style: none;
+  }
 
-.col-links ul {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  margin-top: 5px;
-}
-.col-links li {
-  list-style: none;
-}
+  .col-links a {
+    text-decoration: none;
+    color: #fff;
+  }
 
-.col-links a {
-  text-decoration: none;
-  color: #fff;
-}
-
-.col-links a:hover {
-  background-size: 0 1px, 100% 3px;
-}
-
-
+  .col-links a:hover {
+    background-size: 0 1px, 100% 3px;
+  }
 }
 
 /* Telas médias (tablets) */
@@ -748,7 +802,6 @@ footer {
   }
 
   .title-apresentation {
-
     font-family: "Lexend", sans-serif;
     display: flex;
     width: 100vw;
@@ -761,8 +814,6 @@ footer {
       font-weight: 300;
       width: 90vw;
       text-align: left;
-     
-    
     }
     br {
       display: none;
@@ -784,7 +835,6 @@ footer {
   }
 
   img.pfp-pic {
-
     height: 325px;
   }
 
@@ -867,35 +917,33 @@ footer {
     padding: 0 10px;
   }
 
-  
-.col-links,.col-infos {
-  display: flex;
-  text-align: center;
-  align-items: center;
-  flex-direction: column;
-  text-decoration: none;
-  color: #fff;
-  width: 100%;
-}
+  .col-links,
+  .col-infos {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+    color: #fff;
+    width: 100%;
+  }
 
+  .col-links ul {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 5px;
+  }
+  .col-links li {
+    list-style: none;
+  }
 
-.col-links ul {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  margin-top: 5px;
-}
-.col-links li {
-  list-style: none;
-}
+  .col-links a {
+    text-decoration: none;
+    color: #fff;
+  }
 
-.col-links a {
-  text-decoration: none;
-  color: #fff;
-}
-
-.col-links a:hover {
-  background-size: 0 1px, 100% 3px;
-}
-
+  .col-links a:hover {
+    background-size: 0 1px, 100% 3px;
+  }
 }
