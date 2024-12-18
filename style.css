@@ -450,9 +450,10 @@ footer {
   font-size: 16px;
   text-align: start;
   padding-top: 1px;
+  color: #e9f0fe;
 }
-.col-infos > p > a{
-  color: #fff;
+.col-infos  p a{
+  color: #e9f0fe;
 }
 .col-links {
   display: none;
